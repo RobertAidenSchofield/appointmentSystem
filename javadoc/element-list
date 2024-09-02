@@ -1,0 +1,6 @@
+module:com.example.JAVAdb
+com.robertSchofield.JAVAdb
+com.robertSchofield.JAVAdb.controller
+com.robertSchofield.JAVAdb.DAOs
+com.robertSchofield.JAVAdb.helper
+com.robertSchofield.JAVAdb.model

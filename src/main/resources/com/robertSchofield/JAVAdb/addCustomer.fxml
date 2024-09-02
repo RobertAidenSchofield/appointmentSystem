@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+    xmlns="http://javafx.com/javafx"
+    fx:controller="com.robertSchofield.JAVAdb.controller.addCustomerController">
+  <children>
+    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+      <children>
+        <GridPane layoutX="173.0" layoutY="63.0" prefHeight="257.0" prefWidth="297.0">
+          <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="134.39994880108804"
+                minWidth="10.0" prefWidth="103.3454315740413"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.87275757844805"
+                minWidth="9.96365512816378" prefWidth="9.96365512816378"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.2182318216121" minWidth="10.0"
+                prefWidth="189.47273949993573"/>
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+          </rowConstraints>
+          <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Customer ID: "
+                textAlignment="RIGHT"/>
+            <Label text="Customer Name:" GridPane.rowIndex="1"/>
+            <Label text="Phone Number:" GridPane.rowIndex="2"/>
+            <Label text="Address:" GridPane.rowIndex="3"/>
+            <Label text="Postal Code:" GridPane.rowIndex="4"/>
+            <Label text="Division:" GridPane.rowIndex="5"/>
+            <Label text="Country:" GridPane.rowIndex="6"/>
+            <TextField fx:id="customerIDTextField" disable="true" prefHeight="26.0"
+                prefWidth="127.0" text="Disabled- Auto Generated" GridPane.columnIndex="2"/>
+            <TextField fx:id="customerNameTextField" prefHeight="26.0" prefWidth="151.0"
+                GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <TextField fx:id="customerPhoneTextField" GridPane.columnIndex="2"
+                GridPane.rowIndex="2"/>
+            <TextField fx:id="customerAddressTextField" GridPane.columnIndex="2"
+                GridPane.rowIndex="3"/>
+            <TextField fx:id="customerPostalTextField" prefHeight="26.0" prefWidth="209.0"
+                GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+            <ComboBox fx:id="customerDivisionCombo" prefHeight="26.0" prefWidth="179.0"
+                GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+            <ComboBox fx:id="customerCountryCombo" onAction="#actionCountryLoad" prefHeight="26.0"
+                prefWidth="179.0" GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+          </children>
+        </GridPane>
+        <Label layoutX="254.0" layoutY="23.0" text="Add Customer">
+          <font>
+            <Font name="System Bold" size="14.0"/>
+          </font>
+        </Label>
+        <Button fx:id="saveButton" layoutX="216.0" layoutY="337.0" mnemonicParsing="false"
+            onAction="#actionSaveButton" prefWidth="75.0" text="Save"/>
+        <Button fx:id="cancelButton" layoutX="358.0" layoutY="337.0" mnemonicParsing="false"
+            onAction="#actionCancelButton" prefWidth="75.0" text="Cancel"/>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

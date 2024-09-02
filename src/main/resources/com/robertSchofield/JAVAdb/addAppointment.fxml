@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.robertSchofield.JAVAdb.controller.addAppointmentController">
+  <children>
+    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+      <children>
+        <AnchorPane layoutX="-30.0" layoutY="2.0" prefHeight="608.0" prefWidth="600.0">
+          <children>
+            <GridPane layoutX="173.0" layoutY="63.0" prefHeight="281.0" prefWidth="298.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="134.39994880108804" minWidth="10.0" prefWidth="103.3454315740413" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.87275757844805" minWidth="9.96365512816378" prefWidth="9.96365512816378" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.2182318216121" minWidth="10.0" prefWidth="189.47273949993573" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Appointment ID:" textAlignment="RIGHT" />
+                <Label text="Title:" GridPane.rowIndex="1" />
+                <Label text="Description:" GridPane.rowIndex="2" />
+                <Label text="Location:" GridPane.rowIndex="3" />
+                <Label text="Type:" GridPane.rowIndex="4" />
+                <Label text="Contact" GridPane.rowIndex="5" />
+                <TextField fx:id="appointmentIDTextField" disable="true" prefHeight="26.0" prefWidth="127.0" text="Disabled - auto-generated" GridPane.columnIndex="2">
+                  <font>
+                    <Font name="System Bold" size="12.218181610107422" />
+                  </font>
+                </TextField>
+                <TextField fx:id="appointTitleTextField" prefHeight="26.0" prefWidth="151.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField fx:id="appointDescriptionTextField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <TextField fx:id="appointLocationTextField" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <TextField fx:id="appointTypeTextField" prefHeight="26.0" prefWidth="209.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <ComboBox fx:id="contactComboAdd" prefHeight="26.0" prefWidth="179.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+              </children>
+            </GridPane>
+            <Label layoutX="246.0" layoutY="24.0" text="Add New Appointment">
+              <font>
+                <Font name="System Bold" size="14.0" />
+              </font>
+            </Label>
+            <Button fx:id="saveButton" layoutX="214.0" layoutY="541.0" mnemonicParsing="false" onAction="#actionSaveButton" prefWidth="75.0" text="Save" />
+            <Button fx:id="cancelButton" layoutX="365.0" layoutY="542.0" mnemonicParsing="false" onAction="#actionCancelButton" prefWidth="75.0" text="Cancel" />
+            <DatePicker fx:id="startDatePickerAdd" layoutX="283.0" layoutY="352.0" prefHeight="26.0" prefWidth="119.0" />
+            <Label layoutX="189.0" layoutY="356.0" text="Start Date/Time" />
+            <ComboBox fx:id="startTimeComboAdd" layoutX="419.0" layoutY="352.0" prefHeight="26.0" prefWidth="88.0" />
+            <Label layoutX="191.0" layoutY="403.0" text="End Date/Time" />
+            <DatePicker fx:id="endDatePickerAdd" layoutX="283.0" layoutY="398.0" prefHeight="26.0" prefWidth="119.0" />
+            <ComboBox fx:id="endTimeComboAdd" layoutX="419.0" layoutY="398.0" prefHeight="26.0" prefWidth="88.0" />
+            <ComboBox fx:id="userComboAdd" layoutX="283.0" layoutY="443.0" prefHeight="26.0" prefWidth="180.0" />
+            <ComboBox fx:id="customerComboAdd" layoutX="283.0" layoutY="487.0" prefHeight="26.0" prefWidth="180.0" />
+            <Label layoutX="230.0" layoutY="447.0" text="User ID:" />
+            <Label layoutX="201.0" layoutY="491.0" text="Customer ID: " />
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

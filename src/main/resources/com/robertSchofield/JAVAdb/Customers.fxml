@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="500.0" prefWidth="775.0"
+    xmlns="http://javafx.com/javafx"
+    fx:controller="com.robertSchofield.JAVAdb.controller.customerController">
+  <TableView fx:id="tableview" layoutX="16.0" layoutY="15.0" prefHeight="338.0" prefWidth="744.0">
+  </TableView>
+  <GridPane layoutX="16.0" layoutY="363.0">
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <Button fx:id="custDeleteLabel" mnemonicParsing="false" onAction="#actionCustDelete"
+        prefWidth="75.0" text="Delete" GridPane.columnIndex="2"/>
+    <Button fx:id="custAddLabel" mnemonicParsing="false" onAction="#actionCustAdd" prefWidth="75.0"
+        text="Add" GridPane.columnIndex="1"/>
+    <Button fx:id="custUpdateLabel" mnemonicParsing="false" onAction="#actionCustUpdate"
+        prefWidth="75.0" text="Update"/>
+  </GridPane>
+  <Button layoutX="654.0" layoutY="446.0" mnemonicParsing="false" onAction="#backToMenu"
+      text="Back to Menu"/>
+</AnchorPane>
